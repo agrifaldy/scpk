@@ -23,7 +23,36 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.7/css/fileinput.css" media="all" rel="stylesheet" type="text/css"/>
 
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>
+
     <style type="text/css">
+        #map {
+            height: 300px;
+            width: 600px;
+        }
+        @keyframes check {0% {height: 0;width: 0;}
+            25% {height: 0;width: 10px;}
+            50% {height: 20px;width: 10px;}
+        }
+        .checkbox{background-color:#fff;display:inline-block;height:28px;margin:0 .25em;width:28px;border-radius:4px;border:1px solid #ccc;float:right}
+        .checkbox span{display:block;height:28px;position:relative;width:28px;padding:0}
+        .checkbox span:after{-moz-transform:scaleX(-1) rotate(135deg);-ms-transform:scaleX(-1) rotate(135deg);-webkit-transform:scaleX(-1) rotate(135deg);transform:scaleX(-1) rotate(135deg);-moz-transform-origin:left top;-ms-transform-origin:left top;-webkit-transform-origin:left top;transform-origin:left top;border-right:4px solid #fff;border-top:4px solid #fff;content:'';display:block;height:20px;left:3px;position:absolute;top:15px;width:10px}
+        .checkbox span:hover:after{border-color:#999}
+        .checkbox input{display:none}
+        .checkbox input:checked + span:after{-webkit-animation:check .8s;-moz-animation:check .8s;-o-animation:check .8s;animation:check .8s;border-color:#555}
+        .checkbox input:checked + .default:after{border-color:#444}
+        .checkbox input:checked + .primary:after{border-color:#2196F3}
+        .checkbox input:checked + .success:after{border-color:#8bc34a}
+        .checkbox input:checked + .info:after{border-color:#3de0f5}
+        .checkbox input:checked + .warning:after{border-color:#FFC107}
+        .checkbox input:checked + .danger:after{border-color:#f44336}
 
         .main-section{
 
@@ -141,8 +170,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                 <h6 class="dropdown-header">Menu : </h6>
-                <a class="dropdown-item" href="">Data Cek Pasien</a>
-                <a class="dropdown-item" href="">Buat Data Pasien</a>
+                <a class="dropdown-item" href="{{route('dashboard.cekpasien.index')}}">Cek Pasien</a>
             </div>
         </li>
 
@@ -211,6 +239,14 @@
 <script src="{{asset("js/demo/datatables-demo.js")}}"></script>
 <script src="{{asset("js/demo/chart-area-demo.js")}}"></script>
 
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/i18n/defaults-*.min.js"></script>
 
 
 </body>

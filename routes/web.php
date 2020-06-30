@@ -54,3 +54,14 @@ Route::resource('dashboard/penyakit', 'AdminPenyakitController', [
         // etc...
     ]
 ]);
+Route::resource('dashboard/cek-pasien', 'AdminCekPasienController', [
+    'names' => [
+        'index' => 'dashboard.cekpasien.index',
+        'create' => 'dashboard.cekpasien.create',
+        'edit' => 'dashboard.cekpasien.edit',
+        'store' => 'dashboard.cekpasien.store',
+        'update' => 'dashboard.cekpasien.update',
+        'destroy' => 'dashboard.cekpasien.destroy',
+        // etc...
+    ]
+]);
